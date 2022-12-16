@@ -11,7 +11,7 @@ env:
   # (required) device codename i.e: sweet mojito.. 
   DEVICE: mojito
   # (required) device tree link with branch if exists
-  DT_LINK: https://github.com/febuz007/device_xiaomi_mojito
+  DT_LINK: https://github.com/febuz007/device_xiaomi_mojito/tree/fox_12.1/prebuilt
   # (required) who made your phone ? 
   MANUFACTURER: xiaomi
   # (required) recovery partiton = recovery, else (no recovery partition): boot 
@@ -25,7 +25,7 @@ env:
   SYM: _
   # (required) output format for some reason samsung phones need a custom mkbootimg
   # which compress your recovery into .tar (default: .img / samsung + custom mkbootimg: .tar) 
-  FORMAT: .tar
+  FORMAT: .img
 
 jobs:
   build:
