@@ -5,19 +5,19 @@ on:
 
 env:
   # (required) twrp manifest 
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
+  MANIFEST: https://github.com/febuz007/device_xiaomi_mojito.git
   # (required) manifest branch 
-  BRANCH: twrp-11
+  BRANCH: fox_12.1
   # (required) device codename i.e: sweet mojito.. 
-  DEVICE: m10lte
+  DEVICE: mojito
   # (required) device tree link with branch if exists
-  DT_LINK: https://github.com/SA-17/m10
+  DT_LINK: https://github.com/febuz007/device_xiaomi_mojito
   # (required) who made your phone ? 
-  MANUFACTURER: samsung
+  MANUFACTURER: xiaomi
   # (required) recovery partiton = recovery, else (no recovery partition): boot 
   TARGET: recovery
   # dont change that
-  IMAGE: image
+  IMAGE: twrp
   # (required) depend of device tree if you see twrp_"codename".mk use twrp
   # else (omni_"codename".mk): omni
   OT: twrp
@@ -25,7 +25,7 @@ env:
   SYM: _
   # (required) output format for some reason samsung phones need a custom mkbootimg
   # which compress your recovery into .tar (default: .img / samsung + custom mkbootimg: .tar) 
-  FORMAT: .tar
+  FORMAT: .img
 
 jobs:
   build:
